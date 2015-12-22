@@ -10,16 +10,7 @@
 namespace Dershane.yonetici {
     
     
-    public partial class dersler {
-        
-        /// <summary>
-        /// txtDersAdi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDersAdi;
+    public partial class sinavlar {
         
         /// <summary>
         /// ddlGrup control.
@@ -31,13 +22,31 @@ namespace Dershane.yonetici {
         protected global::System.Web.UI.WebControls.DropDownList ddlGrup;
         
         /// <summary>
-        /// ddlBolum control.
+        /// txtSinavAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBolum;
+        protected global::System.Web.UI.WebControls.TextBox txtSinavAdi;
+        
+        /// <summary>
+        /// txtSinavTuru control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSinavTuru;
+        
+        /// <summary>
+        /// txtSinavinTarihi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSinavinTarihi;
         
         /// <summary>
         /// btnEkle control.
@@ -58,12 +67,12 @@ namespace Dershane.yonetici {
         protected global::System.Web.UI.WebControls.LinkButton btnIptal;
         
         /// <summary>
-        /// rptDers control.
+        /// rptSinav control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptDers;
+        protected global::System.Web.UI.WebControls.Repeater rptSinav;
     }
 }

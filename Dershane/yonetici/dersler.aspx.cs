@@ -14,6 +14,11 @@ namespace Dershane.yonetici
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                return;
+            }
+
             ddlGrup.DataSource = baglan.tablo_getir("spGruplariGetir");
             ddlGrup.DataTextField = "ad";
             ddlGrup.DataValueField = "grupID";
@@ -23,7 +28,7 @@ namespace Dershane.yonetici
             ddlBolum.DataTextField = "ad";
             ddlBolum.DataValueField = "bolumID";
             ddlBolum.DataBind();
-			
+
             rptDers.DataSource = baglan.tablo_getir("spDersleriGetir");
             rptDers.DataBind();
         }
@@ -32,6 +37,7 @@ namespace Dershane.yonetici
         {
             object[,] icerik = { { "@dersAdi", txtDersAdi.Text }, { "@grupID", ddlGrup.SelectedItem.Value }, { "@bolumID", ddlBolum.SelectedItem.Value } };
             baglan.calistir(icerik, "spDersEkle");
+            Response.Redirect("dersler.aspx?ekle=basarili", false);
         }
     }
 }

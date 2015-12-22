@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="dersler.aspx.cs" Inherits="Dershane.yonetici.dersler" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="sinav_sonuclari.aspx.cs" Inherits="Dershane.yonetici.sinav_sonuclari" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
-    Dersler
+    Sınav Sonuçları
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="sayfaIciStil" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-user-follow"></i>
-                Ders Ekle
+                Sınav Sonucu Ekle
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -23,23 +23,35 @@
         <div class="portlet-body form form-horizontal form-bordered">
             <section id="form-username" class="form-horizontal form-bordered">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Ders Adı</label>
+                    <label class="col-sm-3 control-label">Öğrenci Adi</label>
                     <div class="col-sm-4">
-                        <asp:TextBox ID="txtDersAdi" CssClass="form-control" runat="server" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Grubu</label>
-                    <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlGrup" CssClass="form-control" runat="server">
+                        <asp:DropDownList ID="ddlOgrenci" CssClass="form-control" runat="server">
                         </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Bölümü</label>
+                    <label class="col-sm-3 control-label">Sinav Adi</label>
                     <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlBolum" CssClass="form-control" runat="server">
+                        <asp:DropDownList ID="ddlSinav" CssClass="form-control" runat="server">
                         </asp:DropDownList>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Doğru Cevap Sayısı</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtDogru" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Yanlış Cevap Sayısı</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtYanlis" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Boş Bırakılan Soru Sayısı</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtBos" CssClass="form-control" runat="server" />
                     </div>
                 </div>
                 <div class="form-actions">
@@ -65,7 +77,7 @@
     <div class="portlet box red">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-cogs"></i>Dersler
+                <i class="fa fa-cogs"></i>Sınavlar
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -81,30 +93,47 @@
                         <tr>
                             <th>#
                             </th>
-                            <th>Ders Adı
+                            <th>Sınavın Türü
                             </th>
-                            <th>Ders Grubu
+                            <th>Sınav Adı
                             </th>
-                            <th>Ders Bölümü
+                            <th>Öğrenci Adı
+                            </th>
+                            <th>Doğru Sayısı
+                            </th>
+                            <th>Yanlış Sayısı
+                            </th>
+                            <th>Boş Sayısı
+                            </th>
+                            <th>Sınav Tarihi
                             </th>
                             <th>İşlemler
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="rptDers" runat="server">
+                        <asp:Repeater ID="rptSinavSonucu" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td><%#Eval("#") %>
                                     </td>
-                                    <td><%#Eval("dersAdi") %>
+                                    <td><%#Eval("tur") %>
                                     </td>
-                                    <td><%#Eval("grupAdi") %>
+                                    <td><%#Eval("sinavAdi") %>
                                     </td>
-                                    <td><%#Eval("bolumAdi") %>
+                                    <td><%#Eval("ogrenciAdi") %>
+                                    </td>
+                                    <td><%#Eval("dogru") %>
+                                    </td>
+                                    <td><%#Eval("yanlis") %>
+                                    </td>
+                                    <td><%#Eval("bos") %>
                                     </td>
                                     <td>
-                                        <a href='ders_sil.aspx?id=<%#Eval("dersID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
+                                        <%#Eval("tarih", "{0:dd.MM.yyyy}") %>
+                                    </td>
+                                    <td>
+                                        <a href='sinav_sonucu_sil.aspx?id=<%#Eval("sinavSonucID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
                                             Sil
                                         </a>
                                     </td>

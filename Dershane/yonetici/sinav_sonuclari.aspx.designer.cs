@@ -10,34 +10,52 @@
 namespace Dershane.yonetici {
     
     
-    public partial class dersler {
+    public partial class sinav_sonuclari {
         
         /// <summary>
-        /// txtDersAdi control.
+        /// ddlOgrenci control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDersAdi;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOgrenci;
         
         /// <summary>
-        /// ddlGrup control.
+        /// ddlSinav control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGrup;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSinav;
         
         /// <summary>
-        /// ddlBolum control.
+        /// txtDogru control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBolum;
+        protected global::System.Web.UI.WebControls.TextBox txtDogru;
+        
+        /// <summary>
+        /// txtYanlis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtYanlis;
+        
+        /// <summary>
+        /// txtBos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBos;
         
         /// <summary>
         /// btnEkle control.
@@ -58,12 +76,12 @@ namespace Dershane.yonetici {
         protected global::System.Web.UI.WebControls.LinkButton btnIptal;
         
         /// <summary>
-        /// rptDers control.
+        /// rptSinavSonucu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptDers;
+        protected global::System.Web.UI.WebControls.Repeater rptSinavSonucu;
     }
 }

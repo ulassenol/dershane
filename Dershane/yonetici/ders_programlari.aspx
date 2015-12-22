@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="dersler.aspx.cs" Inherits="Dershane.yonetici.dersler" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="ders_programlari.aspx.cs" Inherits="Dershane.yonetici.ders_programlari" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
-    Dersler
+    Ders Programları
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="sayfaIciStil" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-user-follow"></i>
-                Ders Ekle
+                Ders Programı Ekle
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -23,22 +23,41 @@
         <div class="portlet-body form form-horizontal form-bordered">
             <section id="form-username" class="form-horizontal form-bordered">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Ders Adı</label>
+                    <label class="col-sm-3 control-label">Dersin Adı</label>
                     <div class="col-sm-4">
-                        <asp:TextBox ID="txtDersAdi" CssClass="form-control" runat="server" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Grubu</label>
-                    <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlGrup" CssClass="form-control" runat="server">
+                        <asp:DropDownList ID="ddlDers" CssClass="form-control" runat="server">
                         </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Bölümü</label>
+                    <label class="col-sm-3 control-label">Dersin Günü</label>
                     <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlBolum" CssClass="form-control" runat="server">
+                        <asp:TextBox ID="txtGun" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Dersin Saati</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtSaat" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Kaçıncı Ders</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtKacinciDers" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Sınıfın Adı</label>
+                    <div class="col-sm-4">
+                        <asp:DropDownList ID="ddlSinif" CssClass="form-control" runat="server">
+                        </asp:DropDownList>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Grubun Adı</label>
+                    <div class="col-sm-4">
+                        <asp:DropDownList ID="ddlGrup" CssClass="form-control" runat="server">
                         </asp:DropDownList>
                     </div>
                 </div>
@@ -65,7 +84,7 @@
     <div class="portlet box red">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-cogs"></i>Dersler
+                <i class="fa fa-cogs"></i>Ders Programları
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -81,30 +100,38 @@
                         <tr>
                             <th>#
                             </th>
-                            <th>Ders Adı
+                            <th>Sınıf Adı
                             </th>
-                            <th>Ders Grubu
+                            <th>Grup Adı
                             </th>
-                            <th>Ders Bölümü
+                            <th>Hangi Gün
+                            </th>
+                            <th>Ders Saati
+                            </th>
+                            <th>Kaçıncı Ders
                             </th>
                             <th>İşlemler
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="rptDers" runat="server">
+                        <asp:Repeater ID="rptDersProgrami" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td><%#Eval("#") %>
                                     </td>
-                                    <td><%#Eval("dersAdi") %>
+                                    <td><%#Eval("sinifAdi") %>
                                     </td>
                                     <td><%#Eval("grupAdi") %>
                                     </td>
-                                    <td><%#Eval("bolumAdi") %>
+                                    <td><%#Eval("gun") %>
+                                    </td>
+                                    <td><%#Eval("saat") %>
+                                    </td>
+                                    <td><%#Eval("kacinciDers") %>
                                     </td>
                                     <td>
-                                        <a href='ders_sil.aspx?id=<%#Eval("dersID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
+                                        <a href='ders_programi_sil.aspx?id=<%#Eval("dersProgramiID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
                                             Sil
                                         </a>
                                     </td>

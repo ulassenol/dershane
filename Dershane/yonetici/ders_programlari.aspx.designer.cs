@@ -10,16 +10,52 @@
 namespace Dershane.yonetici {
     
     
-    public partial class dersler {
+    public partial class ders_programlari {
         
         /// <summary>
-        /// txtDersAdi control.
+        /// ddlDers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDersAdi;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDers;
+        
+        /// <summary>
+        /// txtGun control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGun;
+        
+        /// <summary>
+        /// txtSaat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSaat;
+        
+        /// <summary>
+        /// txtKacinciDers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtKacinciDers;
+        
+        /// <summary>
+        /// ddlSinif control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSinif;
         
         /// <summary>
         /// ddlGrup control.
@@ -29,15 +65,6 @@ namespace Dershane.yonetici {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlGrup;
-        
-        /// <summary>
-        /// ddlBolum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBolum;
         
         /// <summary>
         /// btnEkle control.
@@ -58,12 +85,12 @@ namespace Dershane.yonetici {
         protected global::System.Web.UI.WebControls.LinkButton btnIptal;
         
         /// <summary>
-        /// rptDers control.
+        /// rptDersProgrami control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptDers;
+        protected global::System.Web.UI.WebControls.Repeater rptDersProgrami;
     }
 }

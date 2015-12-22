@@ -377,6 +377,7 @@
     <Content Include="assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.css" />
     <Content Include="assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.js" />
     <Content Include="cikis.aspx" />
+    <Content Include="resimler\ogrenci\öğrenci_şenol.jpg" />
     <Content Include="yonetici\anasayfa.aspx" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js" />
@@ -467,6 +468,15 @@
     <Content Include="assets\global\plugins\jquery-slimscroll\slimScroll.jquery.json" />
     <Content Include="yonetici\bolumler.aspx" />
     <Content Include="yonetici\bolum_sil.aspx" />
+    <Content Include="yonetici\ders_programi_sil.aspx" />
+    <Content Include="yonetici\ders_programlari.aspx" />
+    <Content Include="yonetici\ogrenciler.aspx" />
+    <Content Include="yonetici\ogrenci_sil.aspx" />
+    <Content Include="yonetici\ogretmenler.aspx" />
+    <Content Include="yonetici\ogretmen_sil.aspx" />
+    <Content Include="yonetici\sinav_sonuclari.aspx" />
+    <Content Include="yonetici\dersler.aspx" />
+    <Content Include="yonetici\ders_sil.aspx" />
     <Content Include="yonetici\donemler.aspx" />
     <Content Include="yonetici\donem_sil.aspx" />
     <Content Include="yonetici\gruplar.aspx" />
@@ -474,6 +484,9 @@
     <Content Include="yonetici\ogrenci_ekle.aspx" />
     <Content Include="assets\global\img\social\Thumbs.db" />
     <Content Include="yonetici\ogretmen_ekle.aspx" />
+    <Content Include="yonetici\sinavlar.aspx" />
+    <Content Include="yonetici\sinav_sil.aspx" />
+    <Content Include="yonetici\sinav_sonucu_sil.aspx" />
     <Content Include="yonetici\siniflar.aspx" />
     <Content Include="yonetici\sinif_sil.aspx" />
     <Content Include="yonetici\veli_ekle.aspx" />
@@ -998,6 +1011,69 @@
     <Compile Include="yonetici\bolum_sil.aspx.designer.cs">
       <DependentUpon>bolum_sil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="yonetici\ders_programi_sil.aspx.cs">
+      <DependentUpon>ders_programi_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ders_programi_sil.aspx.designer.cs">
+      <DependentUpon>ders_programi_sil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ders_programlari.aspx.cs">
+      <DependentUpon>ders_programlari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ders_programlari.aspx.designer.cs">
+      <DependentUpon>ders_programlari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ogrenciler.aspx.cs">
+      <DependentUpon>ogrenciler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ogrenciler.aspx.designer.cs">
+      <DependentUpon>ogrenciler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ogrenci_sil.aspx.cs">
+      <DependentUpon>ogrenci_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ogrenci_sil.aspx.designer.cs">
+      <DependentUpon>ogrenci_sil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ogretmenler.aspx.cs">
+      <DependentUpon>ogretmenler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ogretmenler.aspx.designer.cs">
+      <DependentUpon>ogretmenler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ogretmen_sil.aspx.cs">
+      <DependentUpon>ogretmen_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ogretmen_sil.aspx.designer.cs">
+      <DependentUpon>ogretmen_sil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\sinav_sonuclari.aspx.cs">
+      <DependentUpon>sinav_sonuclari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\sinav_sonuclari.aspx.designer.cs">
+      <DependentUpon>sinav_sonuclari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\dersler.aspx.cs">
+      <DependentUpon>dersler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\dersler.aspx.designer.cs">
+      <DependentUpon>dersler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ders_sil.aspx.cs">
+      <DependentUpon>ders_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ders_sil.aspx.designer.cs">
+      <DependentUpon>ders_sil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yonetici\donemler.aspx.cs">
       <DependentUpon>donemler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1040,6 +1116,27 @@
     <Compile Include="yonetici\ogretmen_ekle.aspx.designer.cs">
       <DependentUpon>ogretmen_ekle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="yonetici\sinavlar.aspx.cs">
+      <DependentUpon>sinavlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\sinavlar.aspx.designer.cs">
+      <DependentUpon>sinavlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\sinav_sil.aspx.cs">
+      <DependentUpon>sinav_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\sinav_sil.aspx.designer.cs">
+      <DependentUpon>sinav_sil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\sinav_sonucu_sil.aspx.cs">
+      <DependentUpon>sinav_sonucu_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\sinav_sonucu_sil.aspx.designer.cs">
+      <DependentUpon>sinav_sonucu_sil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yonetici\siniflar.aspx.cs">
       <DependentUpon>siniflar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1063,7 +1160,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="resimler\ogrenci\" />
     <Folder Include="resimler\ogretmen\" />
   </ItemGroup>
   <PropertyGroup>

@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="dersler.aspx.cs" Inherits="Dershane.yonetici.dersler" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="sinavlar.aspx.cs" Inherits="Dershane.yonetici.sinavlar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
-    Dersler
+    Sınavlar
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="sayfaIciStil" runat="server">
 </asp:Content>
@@ -11,7 +10,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-user-follow"></i>
-                Ders Ekle
+                Sınav Ekle
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -23,23 +22,28 @@
         <div class="portlet-body form form-horizontal form-bordered">
             <section id="form-username" class="form-horizontal form-bordered">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Ders Adı</label>
-                    <div class="col-sm-4">
-                        <asp:TextBox ID="txtDersAdi" CssClass="form-control" runat="server" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Grubu</label>
+                    <label class="col-sm-3 control-label">Sınavın Grubu</label>
                     <div class="col-sm-4">
                         <asp:DropDownList ID="ddlGrup" CssClass="form-control" runat="server">
                         </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Bölümü</label>
+                    <label class="col-sm-3 control-label">Sınavın Adı</label>
                     <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlBolum" CssClass="form-control" runat="server">
-                        </asp:DropDownList>
+                        <asp:TextBox ID="txtSinavAdi" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Sınavın Türü</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtSinavTuru" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Sınavın Tarihi</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtSinavinTarihi" CssClass="form-control" runat="server" />
                     </div>
                 </div>
                 <div class="form-actions">
@@ -49,7 +53,7 @@
                                     <i class="fa fa-check"></i>
                                         Ekle
                             </asp:LinkButton>
-                            <asp:LinkButton ID="btnIptal" OnClick="btnIptal_Click" CssClass="btn btn-danger" runat="server">
+                            <asp:LinkButton ID="btnIptal" CssClass="btn btn-danger" runat="server">
                                     <i class="fa fa-remove"></i>
                                         İptal
                             </asp:LinkButton>
@@ -65,7 +69,7 @@
     <div class="portlet box red">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-cogs"></i>Dersler
+                <i class="fa fa-cogs"></i>Sınavlar
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -81,30 +85,30 @@
                         <tr>
                             <th>#
                             </th>
-                            <th>Ders Adı
+                            <th>Sınav Adı
                             </th>
-                            <th>Ders Grubu
+                            <th>Sınavın Grubu
                             </th>
-                            <th>Ders Bölümü
+                            <th>Sınavın Türü
                             </th>
                             <th>İşlemler
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="rptDers" runat="server">
+                        <asp:Repeater ID="rptSinav" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td><%#Eval("#") %>
                                     </td>
-                                    <td><%#Eval("dersAdi") %>
+                                    <td><%#Eval("sinavAdi") %>
                                     </td>
                                     <td><%#Eval("grupAdi") %>
                                     </td>
-                                    <td><%#Eval("bolumAdi") %>
+                                    <td><%#Eval("tur") %>
                                     </td>
                                     <td>
-                                        <a href='ders_sil.aspx?id=<%#Eval("dersID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
+                                        <a href='sinav_sil.aspx?id=<%#Eval("sinavID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
                                             Sil
                                         </a>
                                     </td>

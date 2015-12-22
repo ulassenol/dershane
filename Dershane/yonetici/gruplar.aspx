@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="gruplar.aspx.cs" Inherits="Dershane.yonetici.gruplar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="gruplar.aspx.cs" Inherits="Dershane.yonetici.gruplar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Gruplar
