@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="dersler.aspx.cs" Inherits="Dershane.yonetici.dersler" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="portallar.aspx.cs" Inherits="Dershane.yonetici.portallar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
-    Dersler
+    Portallar
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="sayfaIciStil" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-user-follow"></i>
-                Ders Ekle
+                Portal Ekle
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -23,22 +23,31 @@
         <div class="portlet-body form form-horizontal form-bordered">
             <section id="form-username" class="form-horizontal form-bordered">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Ders Adı</label>
+                    <label class="col-sm-3 control-label">Kullanıcı Adı</label>
                     <div class="col-sm-4">
-                        <asp:TextBox ID="txtDersAdi" CssClass="form-control" runat="server" />
+                        <asp:TextBox ID="txtKullaniciAdi" CssClass="form-control" runat="server" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Grubu</label>
+                    <label class="col-sm-3 control-label">Şifre</label>
                     <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlGrup" CssClass="form-control" runat="server">
+                        <asp:TextBox ID="txtSifre" CssClass="form-control" runat="server" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Yetki</label>
+                    <div class="col-sm-4">
+                        <asp:DropDownList ID="ddlYetki" CssClass="form-control" runat="server">
+                            <asp:ListItem Text="Öğrenci" Value="ogrenci" />
+                            <asp:ListItem Text="Öğretmen" Value="ogretmen" />
+                            <asp:ListItem Text="Veli" Value="veli" />
                         </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Bölümü</label>
+                    <label class="col-sm-3 control-label">Kişi</label>
                     <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlBolum" CssClass="form-control" runat="server">
+                        <asp:DropDownList ID="ddlKisi" CssClass="form-control" runat="server">
                         </asp:DropDownList>
                     </div>
                 </div>
@@ -65,7 +74,7 @@
     <div class="portlet box red">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-cogs"></i>Dersler
+                <i class="fa fa-cogs"></i>Portallar
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -81,30 +90,30 @@
                         <tr>
                             <th>#
                             </th>
-                            <th>Ders Adı
+                            <th>Ad
                             </th>
-                            <th>Ders Grubu
+                            <th>Kullanıcı Adı
                             </th>
-                            <th>Ders Bölümü
+                            <th>Yetki
                             </th>
                             <th>İşlemler
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="rptDers" runat="server">
+                        <asp:Repeater ID="rptPortal" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td><%#Eval("#") %>
                                     </td>
-                                    <td><%#Eval("dersAdi") %>
+                                    <td><%#Eval("yetkiliAdi") %>
                                     </td>
-                                    <td><%#Eval("grupAdi") %>
+                                    <td><%#Eval("kullaniciAdi") %>
                                     </td>
-                                    <td><%#Eval("bolumAdi") %>
+                                    <td><%#Eval("yetki") %>
                                     </td>
                                     <td>
-                                        <a href='ders_sil.aspx?id=<%#Eval("dersID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
+                                        <a href='portal_sil.aspx?id=<%#Eval("portalID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
                                             Sil
                                         </a>
                                     </td>

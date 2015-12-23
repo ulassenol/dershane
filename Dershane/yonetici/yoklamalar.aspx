@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="dersler.aspx.cs" Inherits="Dershane.yonetici.dersler" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="yoklamalar.aspx.cs" Inherits="Dershane.yonetici.yoklamalar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
-    Dersler
+    Yoklamalar
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="sayfaIciStil" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="icon-user-follow"></i>
-                Ders Ekle
+                Yoklama Ekle
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -23,23 +23,34 @@
         <div class="portlet-body form form-horizontal form-bordered">
             <section id="form-username" class="form-horizontal form-bordered">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Ders Adı</label>
+                    <label class="col-sm-3 control-label">Öğrenci Adı</label>
                     <div class="col-sm-4">
-                        <asp:TextBox ID="txtDersAdi" CssClass="form-control" runat="server" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Grubu</label>
-                    <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlGrup" CssClass="form-control" runat="server">
+                        <asp:DropDownList ID="ddlOgrenci" CssClass="form-control" runat="server">
                         </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Dersin Bölümü</label>
+                    <label class="col-sm-3 control-label">Yoklama Durumu</label>
                     <div class="col-sm-4">
-                        <asp:DropDownList ID="ddlBolum" CssClass="form-control" runat="server">
+                        <asp:DropDownList ID="ddlYoklamaDurumu" CssClass="form-control" runat="server">
+                            <asp:ListItem Text="Geldi" />
+                            <asp:ListItem Text="Gelmedi" />
+                            <asp:ListItem Text="Geç Geldi" />
+                            <asp:ListItem Text="İzinli" />
                         </asp:DropDownList>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Ders</label>
+                    <div class="col-sm-4">
+                        <asp:DropDownList ID="ddlDers" CssClass="form-control" runat="server">
+                        </asp:DropDownList>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Tarih</label>
+                    <div class="col-sm-4">
+                        <asp:TextBox ID="txtTarih" CssClass="form-control" runat="server" />
                     </div>
                 </div>
                 <div class="form-actions">
@@ -65,7 +76,7 @@
     <div class="portlet box red">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-cogs"></i>Dersler
+                <i class="fa fa-cogs"></i>Yoklamalar
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -81,30 +92,42 @@
                         <tr>
                             <th>#
                             </th>
+                            <th>Öğrenci Adı
+                            </th>
+                            <th>Sınıf Adı
+                            </th>
                             <th>Ders Adı
                             </th>
-                            <th>Ders Grubu
+                            <th>Kaçıncı Ders
                             </th>
-                            <th>Ders Bölümü
+                            <th>Yoklama Durumu
+                            </th>
+                            <th>Tarih
                             </th>
                             <th>İşlemler
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="rptDers" runat="server">
+                        <asp:Repeater ID="rptYoklamalar" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td><%#Eval("#") %>
                                     </td>
+                                    <td><%#Eval("ogrenciAdi") %>
+                                    </td>
+                                    <td><%#Eval("sinifAdi") %>
+                                    </td>
                                     <td><%#Eval("dersAdi") %>
                                     </td>
-                                    <td><%#Eval("grupAdi") %>
+                                    <td><%#Eval("yoklamaKacinciDers") %>
                                     </td>
-                                    <td><%#Eval("bolumAdi") %>
+                                    <td><%#Eval("yoklamaDurumu") %>
+                                    </td>
+                                    <td><%#Eval("tarih", "{0:dd.MM.yyyy}") %>
                                     </td>
                                     <td>
-                                        <a href='ders_sil.aspx?id=<%#Eval("dersID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
+                                        <a href='yoklama_sil.aspx?id=<%#Eval("yoklamaID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
                                             Sil
                                         </a>
                                     </td>

@@ -474,6 +474,8 @@
     <Content Include="yonetici\ogrenci_sil.aspx" />
     <Content Include="yonetici\ogretmenler.aspx" />
     <Content Include="yonetici\ogretmen_sil.aspx" />
+    <Content Include="yonetici\portallar.aspx" />
+    <Content Include="yonetici\portal_sil.aspx" />
     <Content Include="yonetici\sinav_sonuclari.aspx" />
     <Content Include="yonetici\dersler.aspx" />
     <Content Include="yonetici\ders_sil.aspx" />
@@ -489,7 +491,11 @@
     <Content Include="yonetici\sinav_sonucu_sil.aspx" />
     <Content Include="yonetici\siniflar.aspx" />
     <Content Include="yonetici\sinif_sil.aspx" />
+    <Content Include="yonetici\veliler.aspx" />
     <Content Include="yonetici\veli_ekle.aspx" />
+    <Content Include="yonetici\veli_sil.aspx" />
+    <Content Include="yonetici\yoklamalar.aspx" />
+    <Content Include="yonetici\yoklama_sil.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1053,6 +1059,20 @@
     <Compile Include="yonetici\ogretmen_sil.aspx.designer.cs">
       <DependentUpon>ogretmen_sil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="yonetici\portallar.aspx.cs">
+      <DependentUpon>portallar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\portallar.aspx.designer.cs">
+      <DependentUpon>portallar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\portal_sil.aspx.cs">
+      <DependentUpon>portal_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\portal_sil.aspx.designer.cs">
+      <DependentUpon>portal_sil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yonetici\sinav_sonuclari.aspx.cs">
       <DependentUpon>sinav_sonuclari.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1151,12 +1171,40 @@
     <Compile Include="yonetici\sinif_sil.aspx.designer.cs">
       <DependentUpon>sinif_sil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="yonetici\veliler.aspx.cs">
+      <DependentUpon>veliler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\veliler.aspx.designer.cs">
+      <DependentUpon>veliler.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yonetici\veli_ekle.aspx.cs">
       <DependentUpon>veli_ekle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="yonetici\veli_ekle.aspx.designer.cs">
       <DependentUpon>veli_ekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\veli_sil.aspx.cs">
+      <DependentUpon>veli_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\veli_sil.aspx.designer.cs">
+      <DependentUpon>veli_sil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\yoklamalar.aspx.cs">
+      <DependentUpon>yoklamalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\yoklamalar.aspx.designer.cs">
+      <DependentUpon>yoklamalar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\yoklama_sil.aspx.cs">
+      <DependentUpon>yoklama_sil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\yoklama_sil.aspx.designer.cs">
+      <DependentUpon>yoklama_sil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
