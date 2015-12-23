@@ -10,7 +10,7 @@
 namespace Dershane.yonetici {
     
     
-    public partial class ogrenciler {
+    public partial class ogrenciler_silinen {
         
         /// <summary>
         /// btnExcelKaydet control.

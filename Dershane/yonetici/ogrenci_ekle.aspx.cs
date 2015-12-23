@@ -14,6 +14,11 @@ namespace Dershane.yonetici
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                return;
+            }
+
             ddlGrup.DataSource = baglan.tablo_getir("spGruplariGetir");
             ddlGrup.DataTextField = "ad";
             ddlGrup.DataValueField = "grupID";

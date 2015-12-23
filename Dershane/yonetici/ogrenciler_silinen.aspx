@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="ogrenciler.aspx.cs" Inherits="Dershane.yonetici.ogrenciler" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="ogrenciler_silinen.aspx.cs" Inherits="Dershane.yonetici.ogrenciler_silinen" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Öğrenciler
 </asp:Content>
@@ -12,7 +11,7 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="fa fa-cogs"></i>
-                Öğrenciler
+                Silinen Öğrenciler
                 
                 <asp:LinkButton ID="btnExcelKaydet" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" runat="server" >
                 <i class="icon-docs"></i>
@@ -23,11 +22,6 @@
                 <i class="icon-docs"></i>
                     Word Olarak Kaydet
                 </asp:LinkButton>
-
-                <a href="ogrenci_ekle.aspx" class="btn btn-sm btn-success">
-                    <i class="icon-plus"></i>
-                    Öğrenci Ekle
-                </a>
             </div>
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
@@ -71,8 +65,6 @@
                             </th>
                             <th>Durum
                             </th>
-                            <th>İşlemler
-                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -109,11 +101,6 @@
                                     <td><%#Eval("danisman") %>
                                     </td>
                                     <td><%#Eval("durum") %>
-                                    </td>
-                                    <td>
-                                        <a href='ogrenci_sil.aspx?id=<%#Eval("ogrenciID") %>' class="btn btn-danger"><i class="fa fa-remove"></i>
-                                            Sil
-                                        </a>
                                     </td>
                                 </tr>
                             </ItemTemplate>

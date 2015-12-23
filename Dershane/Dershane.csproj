@@ -377,7 +377,13 @@
     <Content Include="assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.css" />
     <Content Include="assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.js" />
     <Content Include="cikis.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="resimler\logo.png" />
     <Content Include="resimler\ogrenci\öğrenci_şenol.jpg" />
+    <Content Include="resimler\ogretmen\baran_şenol.jpg" />
+    <Content Include="resimler\ogretmen\deneme2_şenol.png" />
+    <Content Include="resimler\ogretmen\deneme_şenol.png" />
+    <Content Include="resimler\yonetici\ulassenol.jpg" />
     <Content Include="yonetici\anasayfa.aspx" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js" />
@@ -471,6 +477,7 @@
     <Content Include="yonetici\ders_programi_sil.aspx" />
     <Content Include="yonetici\ders_programlari.aspx" />
     <Content Include="yonetici\ogrenciler.aspx" />
+    <Content Include="yonetici\ogrenciler_silinen.aspx" />
     <Content Include="yonetici\ogrenci_sil.aspx" />
     <Content Include="yonetici\ogretmenler.aspx" />
     <Content Include="yonetici\ogretmen_sil.aspx" />
@@ -497,6 +504,7 @@
     <Content Include="yonetici\yoklamalar.aspx" />
     <Content Include="yonetici\yoklama_sil.aspx" />
     <Content Include="veli\veli.Master" />
+    <None Include="Properties\PublishProfiles\Dershane.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1002,7 +1010,9 @@
       <DependentUpon>anasayfa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Baglan.cs" />
-    <Compile Include="Fonksiyon.cs" />
+    <Compile Include="Fonksiyon.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="giris.aspx.cs">
       <DependentUpon>giris.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1045,6 +1055,13 @@
     </Compile>
     <Compile Include="yonetici\ogrenciler.aspx.designer.cs">
       <DependentUpon>ogrenciler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici\ogrenciler_silinen.aspx.cs">
+      <DependentUpon>ogrenciler_silinen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetici\ogrenciler_silinen.aspx.designer.cs">
+      <DependentUpon>ogrenciler_silinen.aspx</DependentUpon>
     </Compile>
     <Compile Include="yonetici\ogrenci_sil.aspx.cs">
       <DependentUpon>ogrenci_sil.aspx</DependentUpon>
@@ -1218,7 +1235,6 @@
   <ItemGroup>
     <Folder Include="ogrenci\" />
     <Folder Include="ogretmen\" />
-    <Folder Include="resimler\ogretmen\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

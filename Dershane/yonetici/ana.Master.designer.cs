@@ -31,6 +31,24 @@ namespace Dershane {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder sayfaIciStil;
         
         /// <summary>
+        /// imgYetkiliFoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgYetkiliFoto;
+        
+        /// <summary>
+        /// lblYetkiliAdi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblYetkiliAdi;
+        
+        /// <summary>
         /// btnCikis control.
         /// </summary>
         /// <remarks>

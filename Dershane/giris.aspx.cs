@@ -32,7 +32,7 @@ namespace Dershane
 
                     if (yetki == "var")
                     {
-                        Response.Redirect("anasayfa.aspx?yetki=" + yetki, false);
+                        Response.Redirect("/yonetici/anasayfa.aspx?yetki=" + yetki, false);
                     }
                     else
                     {

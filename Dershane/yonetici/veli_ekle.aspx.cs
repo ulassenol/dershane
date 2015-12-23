@@ -13,6 +13,11 @@ namespace Dershane.yonetici
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                return;
+            }
+
             ddlOgrenci.DataSource = baglan.tablo_getir("spOgrencileriGetir");
             ddlOgrenci.DataTextField = "ogrenci";
             ddlOgrenci.DataValueField = "ogrenciID";

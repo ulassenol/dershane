@@ -51,9 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="login">
     <!-- BEGIN LOGO -->
     <div class="logo">
-        <a href="index.html">
-            <img src="../../assets/admin/layout/img/logo-big.png" alt="" />
-        </a>
+        <img src="resimler/logo.png" />
     </div>
     <!-- END LOGO -->
     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->

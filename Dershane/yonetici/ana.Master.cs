@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,7 +19,7 @@ namespace Dershane
             {
                 menuAnasayfa.Attributes.Add("class", "active");
             }
-            else if (aktifSayfa == "~/yonetici/ogrenciler.aspx" || aktifSayfa == "~/yonetici/ogrenci_ekle.aspx")
+            else if (aktifSayfa == "~/yonetici/ogrenciler.aspx" || aktifSayfa == "~/yonetici/ogrenci_ekle.aspx" || aktifSayfa == "~/yonetici/ogrenciler_silinen.aspx")
             {
                 menuOgrenci.Attributes.Add("class", "active open");
             }
@@ -89,13 +90,23 @@ namespace Dershane
                 }
                 else
                 {
-                    yetki = fonksiyon.yetkiVarMi(kullaniciID, sifre, yetki);
+                    string yetkiVarMi = fonksiyon.yetkiVarMi(kullaniciID, sifre, yetki);
 
-                    if (yetki == "yok")
+                    if (yetkiVarMi == "yok")
                     {
                         Response.Redirect("~/giris.aspx?yetki=" + yetki, false);
                     }
+                    else if (yetkiVarMi == "var")
+                    {
+                        SqlDataReader dra = fonksiyon.yetkiliBilgisiGetir(kullaniciID, yetki);
+                        while (dra.Read())
+                        {
+                            lblYetkiliAdi.Text = dra["ad"] + " " + dra["soyad"];
+                            imgYetkiliFoto.ImageUrl = "../resimler/yonetici/" + dra["resim"];
+                        }
+                    }
                 }
+
             }
             else
             {
