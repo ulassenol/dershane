@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="yoklamalar.aspx.cs" Inherits="Dershane.yonetici.yoklamalar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="yoklamalar.aspx.cs" Inherits="Dershane.yonetici.yoklamalar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Yoklamalar

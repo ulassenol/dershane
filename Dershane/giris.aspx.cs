@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -48,7 +49,7 @@ namespace Dershane
         protected void btnGiris_Click(object sender, EventArgs e)
         {
             string kullaniciAdi = txtKullaniciAdi.Text;
-            string sifre = txtSifre.Text;
+            string sifre = FormsAuthentication.HashPasswordForStoringInConfigFile(txtSifre.Text, "md5");
             string yetki = ddlYetki.SelectedItem.Value;
             int kullaniciID = fonksiyon.kullaniciIDGetir(kullaniciAdi, yetki);
             string yetkiVarMi = "yok";

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ana.master.cs" Inherits="Dershane.ana" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ana.Master.cs" Inherits="Dershane.ana" %>
 
 <!DOCTYPE html>
 <!-- 
@@ -59,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
-<body class="page-header-fixed page-quick-sidebar-over-content">
+<body class="page-header-fixed page-sidebar-fixed page-quick-sidebar-over-content">
     <form runat="server">
         <!-- BEGIN HEADER -->
         <div class="page-header navbar navbar-fixed-top">
@@ -452,52 +452,126 @@ License: You must have a valid license purchased only from themeforest(the above
                             </form>
                             <!-- END RESPONSIVE QUICK SEARCH FORM -->
                         </li>
+
                         <li class="heading">
-                            <h3 class="uppercase">Öğrenci</h3>
+                            <h3 class="uppercase">Yönetici</h3>
                         </li>
-                        <li>
+                        <li runat="server" id="menuAnasayfa">
+                            <a href="anasayfa.aspx">
+                                <i class="icon-home"></i>
+                                <span class="title">Anasayfa</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuOgrenci">
                             <a href="javascript:;">
-                                <i class="icon-settings"></i>
-                                <span class="title">Form Stuff</span>
+                                <i class="icon-graduation"></i>
+                                <span class="title">Öğrenci</span>
                                 <span class="arrow "></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="form_controls_md.html">
-                                        <span class="badge badge-roundless badge-danger">new</span>Material Design<br>
-                                        Form Controls</a>
+                                    <a href="ogrenciler.aspx">Öğrenciler
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="form_controls.html">Bootstrap<br>
-                                        Form Controls</a>
-                                </li>
-                                <li>
-                                    <a href="form_icheck.html">iCheck Controls</a>
-                                </li>
-                                <li>
-                                    <a href="form_layouts.html">Form Layouts</a>
-                                </li>
-                                <li>
-                                    <a href="form_editable.html">
-                                        <span class="badge badge-roundless badge-warning">new</span>Form X-editable</a>
-                                </li>
-                                <li>
-                                    <a href="form_wizard.html">Form Wizard</a>
-                                </li>
-                                <li>
-                                    <a href="form_validation.html">Form Validation</a>
-                                </li>
-                                <li>
-                                    <a href="form_image_crop.html">
-                                        <span class="badge badge-roundless badge-danger">new</span>Image Cropping</a>
-                                </li>
-                                <li>
-                                    <a href="form_fileupload.html">Multiple File Upload</a>
-                                </li>
-                                <li>
-                                    <a href="form_dropzone.html">Dropzone File Upload</a>
+                                    <a href="ogrenci_ekle.aspx">Öğrenci Ekle
+                                    </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li runat="server" id="menuVeli">
+                            <a href="javascript:;">
+                                <i class="icon-moustache"></i>
+                                <span class="title">Veli</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="veliler.aspx">Veliler
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="veli_ekle.aspx">Veli Ekle
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="menuOgretmen">
+                            <a href="javascript:;">
+                                <i class="icon-chemistry"></i>
+                                <span class="title">Öğretmen</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="ogretmenler.aspx">Öğretmenler
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ogretmen_ekle.aspx">Öğretmen Ekle
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="menuYoklama">
+                            <a href="yoklamalar.aspx">
+                                <i class="icon-notebook"></i>
+                                <span class="title">Yoklama</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuDersProgrami">
+                            <a href="ders_programlari.aspx">
+                                <i class="icon-calendar"></i>
+                                <span class="title">Ders Programı</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuPortal">
+                            <a href="portallar.aspx">
+                                <i class="icon-settings"></i>
+                                <span class="title">Portal</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuSinav">
+                            <a href="sinavlar.aspx">
+                                <i class="icon-book-open"></i>
+                                <span class="title">Sınav</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuSinavSonucu">
+                            <a href="sinav_sonuclari.aspx">
+                                <i class="icon-envelope-letter"></i>
+                                <span class="title">Sınav Sonucu</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuSinif">
+                            <a href="siniflar.aspx">
+                                <i class="icon-ghost"></i>
+                                <span class="title">Sınıf</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuBolum">
+                            <a href="bolumler.aspx">
+                                <i class="icon-magic-wand"></i>
+                                <span class="title">Bölüm</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuDers">
+                            <a href="dersler.aspx">
+                                <i class="icon-speech"></i>
+                                <span class="title">Ders</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuDonem">
+                            <a href="donemler.aspx">
+                                <i class="icon-paper-plane"></i>
+                                <span class="title">Dönem</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuGrup">
+                            <a href="gruplar.aspx">
+                                <i class="icon-compass"></i>
+                                <span class="title">Grup</span>
+                            </a>
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="veliler.aspx.cs" Inherits="Dershane.yonetici.veliler" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="veliler.aspx.cs" Inherits="Dershane.yonetici.veliler" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Veliler
 </asp:Content>

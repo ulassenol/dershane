@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="sinav_sonuclari.aspx.cs" Inherits="Dershane.yonetici.sinav_sonuclari" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="sinav_sonuclari.aspx.cs" Inherits="Dershane.yonetici.sinav_sonuclari" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Sınav Sonuçları

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="ogrenci_ekle.aspx.cs" Inherits="Dershane.yonetici.ogrenci_ekle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="ogrenci_ekle.aspx.cs" Inherits="Dershane.yonetici.ogrenci_ekle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Öğrenci Ekle

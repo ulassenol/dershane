@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ana.Master" AutoEventWireup="true" CodeBehind="anasayfa.aspx.cs" Inherits="Dershane.anasayfa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yonetici/ana.Master" AutoEventWireup="true" CodeBehind="anasayfa.aspx.cs" Inherits="Dershane.anasayfa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="baslik" runat="server">
     Anasayfa
