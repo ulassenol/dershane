@@ -236,7 +236,7 @@ namespace Dershane
             OleDbConnection baglanti = new OleDbConnection(baglantiStr);
             baglanti.Open();
 
-            OleDbCommand objCmdSelect = new OleDbCommand(sqlSorgu, baglanti);
+            OleDbCommand objCmdSelect = new OleDbCommand(excelSorgu, baglanti);
             OleDbDataAdapter objAdapter = new OleDbDataAdapter();
             objAdapter.SelectCommand = objCmdSelect;
 
