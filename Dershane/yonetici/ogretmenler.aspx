@@ -14,6 +14,16 @@
                 <i class="fa fa-cogs"></i>
                 Öğretmenler
                 
+                <asp:LinkButton ID="btnExcelKaydet" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" runat="server" >
+                <i class="icon-docs"></i>
+                    Excel Olarak Kaydet
+                </asp:LinkButton>
+
+                <asp:LinkButton ID="btnWordKaydet" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" runat="server" >
+                <i class="icon-docs"></i>
+                    Word Olarak Kaydet
+                </asp:LinkButton>
+
                 <a href="ogretmen_ekle.aspx" class="btn btn-sm btn-success">
                     <i class="icon-plus"></i>
                     Öğretmen Ekle

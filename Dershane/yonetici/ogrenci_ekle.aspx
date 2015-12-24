@@ -7,7 +7,6 @@
     <link href="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="icerik" runat="server">
-
     <!-- BEGIN PORTLET-->
     <div class="portlet box green">
         <div class="portlet-title">

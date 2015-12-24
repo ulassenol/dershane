@@ -15,6 +15,8 @@
                 <i class="icon-user-follow"></i>
                 Öğretmen Ekle
             </div>
+            <asp:FileUpload ID="fileExcel" runat="server" />
+            <asp:Button ID="btnExcelKaydet" OnClick="btnExcelKaydet_Click" Text="Kaydet" runat="server" />
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
                 <a href="#portlet-config" data-toggle="modal" class="config"></a>

@@ -383,6 +383,8 @@
     <Content Include="resimler\ogretmen\baran_şenol.jpg" />
     <Content Include="resimler\ogretmen\deneme2_şenol.png" />
     <Content Include="resimler\ogretmen\deneme_şenol.png" />
+    <Content Include="resimler\yonetici\kubra.jpg" />
+    <Content Include="resimler\yonetici\oguz.jpg" />
     <Content Include="resimler\yonetici\ulassenol.jpg" />
     <Content Include="yonetici\anasayfa.aspx" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
@@ -1233,6 +1235,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dosyalar\excel\" />
     <Folder Include="ogrenci\" />
     <Folder Include="ogretmen\" />
   </ItemGroup>

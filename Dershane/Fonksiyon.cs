@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -59,7 +61,7 @@ namespace Dershane
 
             try
             {
-                 dra = baglan.calistir_dra(icerik, "spYetkiliBilgisiGetir");
+                dra = baglan.calistir_dra(icerik, "spYetkiliBilgisiGetir");
             }
             catch (Exception)
             {
@@ -113,7 +115,7 @@ namespace Dershane
                     }
 
                     Bitmap sonResim = new Bitmap(orjResim, (int)genislik, (int)yukseklik);
-                    sonResim.Save("~/resimler/ogretmen/" + resimAdi);
+                    sonResim.Save(Server.MapPath("~/resimler/ogretmen/") + resimAdi, ImageFormat.Jpeg);
                     return sonuc = resimAdi;
                 }
                 else
@@ -220,6 +222,56 @@ namespace Dershane
             HttpContext.Current.Response.Output.Write(stringwriter.ToString());
             HttpContext.Current.Response.Flush();
             HttpContext.Current.Response.End();
+        }
+
+        public DataTable excelVeriOku(FileUpload dosya, string sayfaAdi)
+        {
+            string excelSorgu = "SELECT * FROM [" + sayfaAdi + "$]";
+
+            string dosyaAdi = dosya.PostedFile.FileName;
+            string dosyaYolu = Server.MapPath("~/dosyalar/excel/" + dosyaAdi);
+            dosya.SaveAs(dosyaYolu);
+
+            string baglantiStr = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + dosyaYolu + ";Extended Properties=Excel 8.0";
+            OleDbConnection baglanti = new OleDbConnection(baglantiStr);
+            baglanti.Open();
+
+            OleDbCommand objCmdSelect = new OleDbCommand(sqlSorgu, baglanti);
+            OleDbDataAdapter objAdapter = new OleDbDataAdapter();
+            objAdapter.SelectCommand = objCmdSelect;
+
+            DataSet objDataset = new DataSet();
+            objAdapter.Fill(objDataset, "ExceldenOku");
+            DataTable tablo = objDataset.Tables[0];
+
+            baglanti.Close();
+
+            return tablo;
+        }
+
+        public void tabloyuVeritabaninaKaydet(object[] tablo, DataTable datatable, string prosedur)
+        {
+            int sutunSayisi = tablo.Length;
+            int satirSayisi = datatable.Rows.Count;
+            object[,] icerik = new object[sutunSayisi, 2];
+
+            for (int i = 0; i < satirSayisi; i++)
+            {
+                for (int j = 0; j < sutunSayisi; j++)
+                {
+                    icerik[j, 0] = tablo[j];
+                    icerik[j, 1] = datatable.Rows[i][j + 1];
+                }
+
+                baglan.calistir(icerik, prosedur);
+            }
+        }
+
+        public object[] ogretmenTablosu()
+        {
+            object[] ogretmenTablosu = { "@ad", "@soyad", "@tcNo", "@cinsiyet", "@adres", "@brans", "@telefon", "@eposta", "@durum" };
+
+            return ogretmenTablosu;
         }
 
     }

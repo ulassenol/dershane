@@ -13,6 +13,24 @@ namespace Dershane.yonetici {
     public partial class ogretmen_ekle {
         
         /// <summary>
+        /// fileExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileExcel;
+        
+        /// <summary>
+        /// btnExcelKaydet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExcelKaydet;
+        
+        /// <summary>
         /// fileFotograf control.
         /// </summary>
         /// <remarks>
