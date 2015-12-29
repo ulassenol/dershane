@@ -20,9 +20,9 @@ namespace Dershane.yonetici
                 return;
             }
 
-            ddlKisi.DataSource = baglan.tablo_getir("spPortallariGetir");
+            ddlKisi.DataSource = baglan.tablo_getir("spPortalGetirYetkisizOgrenci");
             ddlKisi.DataTextField = "kisi";
-            ddlKisi.DataValueField = "kullaniciID";
+            ddlKisi.DataValueField = "ogrenciID";
             ddlKisi.DataBind();
 
             rptPortal.DataSource = baglan.tablo_getir("spPortallariGetir");

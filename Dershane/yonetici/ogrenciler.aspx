@@ -13,16 +13,106 @@
             <div class="caption">
                 <i class="fa fa-cogs"></i>
                 Öğrenciler
-                
-                <asp:LinkButton ID="btnExcelKaydet" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" runat="server" >
+
+                <div class="btn-group">
+                    <asp:LinkButton ID="btnExcelKaydet" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" runat="server">
                 <i class="icon-docs"></i>
                     Excel Olarak Kaydet
-                </asp:LinkButton>
-
-                <asp:LinkButton ID="btnWordKaydet" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" runat="server" >
+                    </asp:LinkButton>
+                    <button type="button" class="btn btn-sm default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydetAktif" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@durum" CommandArgument="Aktif" runat="server">
+                                Aktif Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydetPasif" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@durum" CommandArgument="Pasif" runat="server">
+                                Pasif Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydetErkek" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@cinsiyet" CommandArgument="Erkek" runat="server">
+                                Erkek Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydetKadin" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@cinsiyet" CommandArgument="Kadın" runat="server">
+                                Kadın Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydetMezun" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@grupAdi" CommandArgument="Mezun" runat="server">
+                                Mezun Grubu Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydet12" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@grupAdi" CommandArgument="12. Sınıf" runat="server">
+                                12. Sınıf Grubu Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydet11" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@grupAdi" CommandArgument="11. Sınıf" runat="server">
+                                11. Sınıf Grubu Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="btnExcelKaydetAktifErkek" CssClass="btn btn-sm purple-plum-stripe default" OnClick="btnExcelKaydet_Click" CommandName="@durum, @cinsiyet" CommandArgument="Aktif, Erkek" runat="server">
+                                Aktif ve Erkek Olanlar
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="btn-group">
+                    <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" runat="server">
                 <i class="icon-docs"></i>
                     Word Olarak Kaydet
-                </asp:LinkButton>
+                    </asp:LinkButton>
+                    <button type="button" class="btn btn-sm default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <asp:LinkButton ID="LinkButton2" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@durum" CommandArgument="Aktif" runat="server">
+                                Aktif Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton3" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@durum" CommandArgument="Pasif" runat="server">
+                                Pasif Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton4" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@cinsiyet" CommandArgument="Erkek" runat="server">
+                                Erkek Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton5" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@cinsiyet" CommandArgument="Kadın" runat="server">
+                                Kadın Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton6" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@grupAdi" CommandArgument="Mezun" runat="server">
+                                Mezun Grubu Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton7" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@grupAdi" CommandArgument="12. Sınıf" runat="server">
+                                12. Sınıf Grubu Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton8" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@grupAdi" CommandArgument="11. Sınıf" runat="server">
+                                11. Sınıf Grubu Olanlar
+                            </asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="LinkButton9" CssClass="btn btn-sm blue-chambray-stripe default" OnClick="btnWordKaydet_Click" CommandName="@durum, @cinsiyet" CommandArgument="Aktif, Erkek" runat="server">
+                                Aktif ve Erkek Olanlar
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
 
                 <a href="ogrenci_ekle.aspx" class="btn btn-sm btn-success">
                     <i class="icon-plus"></i>

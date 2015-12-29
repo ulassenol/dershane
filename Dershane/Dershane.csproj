@@ -378,6 +378,13 @@
     <Content Include="assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.js" />
     <Content Include="cikis.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="ogrenci\anasayfa.aspx" />
+    <Content Include="ogrenci\danismana_mesaj.aspx" />
+    <Content Include="ogrenci\ders_programi.aspx" />
+    <Content Include="ogrenci\sinav_sonuclari.aspx" />
+    <Content Include="ogrenci\yoklama.aspx" />
+    <Content Include="ogretmen\anasayfa.aspx" />
+    <Content Include="ogretmen\ogrencilerim.aspx" />
     <Content Include="resimler\logo.png" />
     <Content Include="resimler\ogrenci\öğrenci_şenol.jpg" />
     <Content Include="resimler\ogretmen\baran_şenol.jpg" />
@@ -386,6 +393,9 @@
     <Content Include="resimler\yonetici\kubra.jpg" />
     <Content Include="resimler\yonetici\oguz.jpg" />
     <Content Include="resimler\yonetici\ulassenol.jpg" />
+    <Content Include="veli\anasayfa.aspx" />
+    <Content Include="veli\yavrumun_sinav_sonucu.aspx" />
+    <Content Include="veli\yavrumun_yoklamasi.aspx" />
     <Content Include="yonetici\anasayfa.aspx" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
     <Content Include="assets\global\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.min.js" />
@@ -506,6 +516,9 @@
     <Content Include="yonetici\yoklamalar.aspx" />
     <Content Include="yonetici\yoklama_sil.aspx" />
     <Content Include="veli\veli.Master" />
+    <Content Include="dosyalar\excel\ogretmen.xls" />
+    <Content Include="ogrenci\ogrenci.Master" />
+    <Content Include="ogretmen\ogretmen.Master" />
     <None Include="Properties\PublishProfiles\Dershane.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -983,12 +996,96 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ogrenci\anasayfa.aspx.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci\anasayfa.aspx.designer.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenci\danismana_mesaj.aspx.cs">
+      <DependentUpon>danismana_mesaj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci\danismana_mesaj.aspx.designer.cs">
+      <DependentUpon>danismana_mesaj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenci\ders_programi.aspx.cs">
+      <DependentUpon>ders_programi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci\ders_programi.aspx.designer.cs">
+      <DependentUpon>ders_programi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenci\ogrenci.Master.cs">
+      <DependentUpon>ogrenci.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci\ogrenci.Master.designer.cs">
+      <DependentUpon>ogrenci.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenci\sinav_sonuclari.aspx.cs">
+      <DependentUpon>sinav_sonuclari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci\sinav_sonuclari.aspx.designer.cs">
+      <DependentUpon>sinav_sonuclari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenci\yoklama.aspx.cs">
+      <DependentUpon>yoklama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogrenci\yoklama.aspx.designer.cs">
+      <DependentUpon>yoklama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmen\anasayfa.aspx.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogretmen\anasayfa.aspx.designer.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmen\ogrencilerim.aspx.cs">
+      <DependentUpon>ogrencilerim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogretmen\ogrencilerim.aspx.designer.cs">
+      <DependentUpon>ogrencilerim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ogretmen\ogretmen.Master.cs">
+      <DependentUpon>ogretmen.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ogretmen\ogretmen.Master.designer.cs">
+      <DependentUpon>ogretmen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="veli\anasayfa.aspx.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="veli\anasayfa.aspx.designer.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="veli\veli.Master.cs">
       <DependentUpon>veli.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="veli\veli.Master.designer.cs">
       <DependentUpon>veli.Master</DependentUpon>
+    </Compile>
+    <Compile Include="veli\yavrumun_sinav_sonucu.aspx.cs">
+      <DependentUpon>yavrumun_sinav_sonucu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="veli\yavrumun_sinav_sonucu.aspx.designer.cs">
+      <DependentUpon>yavrumun_sinav_sonucu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="veli\yavrumun_yoklamasi.aspx.cs">
+      <DependentUpon>yavrumun_yoklamasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="veli\yavrumun_yoklamasi.aspx.designer.cs">
+      <DependentUpon>yavrumun_yoklamasi.aspx</DependentUpon>
     </Compile>
     <Compile Include="yonetici\ana.Master.cs">
       <DependentUpon>ana.Master</DependentUpon>
@@ -1234,11 +1331,7 @@
       <DependentUpon>yoklama_sil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dosyalar\excel\" />
-    <Folder Include="ogrenci\" />
-    <Folder Include="ogretmen\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

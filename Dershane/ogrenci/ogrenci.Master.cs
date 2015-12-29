@@ -6,26 +6,34 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Dershane.veli
+namespace Dershane.ogrenci
 {
-    public partial class veli : System.Web.UI.MasterPage
+    public partial class ogrenci : System.Web.UI.MasterPage
     {
         Fonksiyon fonksiyon = new Fonksiyon();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             string aktifSayfa = Page.AppRelativeVirtualPath.ToString();
-            if (aktifSayfa == "~/veli/anasayfa.aspx")
+            if (aktifSayfa == "~/ogrenci/anasayfa.aspx")
             {
                 menuAnasayfa.Attributes.Add("class", "active");
             }
-            else if (aktifSayfa == "~/veli/yavrumun_sinav_sonucu.aspx")
-            {
-                menuSinavSonucu.Attributes.Add("class", "active open");
-            }
-            else if (aktifSayfa == "~/veli/yavrumun_yoklamasi.aspx")
+            else if (aktifSayfa == "~/ogrenci/yoklama.aspx")
             {
                 menuYoklama.Attributes.Add("class", "active open");
+            }
+            else if (aktifSayfa == "~/ogrenci/ders_programi.aspx")
+            {
+                menuDersProgrami.Attributes.Add("class", "active open");
+            }
+            else if (aktifSayfa == "~/ogrenci/sinav_sonuclari.aspx")
+            {
+                menuSinavSonuclari.Attributes.Add("class", "active open");
+            }
+            else if (aktifSayfa == "~/ogrenci/danismana_mesaj.aspx")
+            {
+                menuDanismanaMesaj.Attributes.Add("class", "active open");
             }
 
             if (IsPostBack)
@@ -39,7 +47,7 @@ namespace Dershane.veli
                 string sifre = Request.Cookies["giris"]["sifre"];
                 string yetki = Request.Cookies["giris"]["yetki"];
 
-                if (yetki != "veli")
+                if (yetki != "ogrenci")
                 {
                     fonksiyon.cerezSil();
                     Response.Redirect("~/giris.aspx?yetki=yok", false);
@@ -58,6 +66,7 @@ namespace Dershane.veli
                         while (dra.Read())
                         {
                             lblYetkiliAdi.Text = dra["ad"] + " " + dra["soyad"];
+                            imgYetkiliFoto.ImageUrl = "../resimler/ogrenci/" + dra["resim"];
                         }
                     }
                 }

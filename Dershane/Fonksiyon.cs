@@ -129,7 +129,6 @@ namespace Dershane
             }
         }
 
-
         public string fotografEkleOgrenci(FileUpload resim, string ad, string soyad)
         {
             string sonuc = "hata";
@@ -174,11 +173,61 @@ namespace Dershane
             }
         }
 
+        public void excelOlarakKaydet(string dosyaAdi, object[,] icerik, string prosedurAdi)
+        {
+            GridView gridview = new GridView();
+            gridview.AllowPaging = false;
+            gridview.DataSource = baglan.tablo_getir(icerik, prosedurAdi);
+            gridview.DataBind();
+            gridview.HeaderRow.Style.Add("background-color", "#FFFFFF");
+
+            HttpContext.Current.Response.ContentEncoding = System.Text.Encoding.GetEncoding("windows-1254");
+            HttpContext.Current.Response.Charset = "windows-1254";
+            HttpContext.Current.Response.ClearContent();
+            HttpContext.Current.Response.AddHeader("content-disposition", "attachment;filename=" + dosyaAdi + ".xls");
+            HttpContext.Current.Response.ContentType = "application/excel";
+
+            StringWriter stringwriter = new StringWriter();
+            HtmlTextWriter htmltextwriter = new HtmlTextWriter(stringwriter);
+
+            HtmlForm form = new HtmlForm();
+            form.Controls.Add(gridview);
+            this.Controls.Add(form);
+            form.RenderControl(htmltextwriter);
+
+            HttpContext.Current.Response.Write(stringwriter.ToString());
+            HttpContext.Current.Response.End();
+        }
+
+        public void wordOlarakKaydet(string dosyaAdi, object[,] icerik, string prosedurAdi)
+        {
+            GridView gridview = new GridView();
+            gridview.AllowPaging = false;
+            gridview.DataSource = baglan.tablo_getir(icerik, prosedurAdi);
+            gridview.DataBind();
+            gridview.HeaderRow.Style.Add("background-color", "#FFFFFF");
+
+            HttpContext.Current.Response.Clear();
+            HttpContext.Current.Response.Buffer = true;
+            HttpContext.Current.Response.ContentEncoding = System.Text.Encoding.GetEncoding("windows-1254");
+            HttpContext.Current.Response.Charset = "windows-1254";
+            HttpContext.Current.Response.AddHeader("content-disposition", "attachment;filename=" + dosyaAdi + ".doc");
+            HttpContext.Current.Response.ContentType = "application/vnd.ms-word ";
+
+            StringWriter stringwriter = new StringWriter();
+            HtmlTextWriter htmltextwriter = new HtmlTextWriter(stringwriter);
+
+            gridview.RenderControl(htmltextwriter);
+            HttpContext.Current.Response.Output.Write(stringwriter.ToString());
+            HttpContext.Current.Response.Flush();
+            HttpContext.Current.Response.End();
+        }
+
         public void excelOlarakKaydet(string dosyaAdi, string prosedurAdi)
         {
             GridView gridview = new GridView();
             gridview.AllowPaging = false;
-            gridview.DataSource = baglan.tablo_getir(prosedurAdi); ;
+            gridview.DataSource = baglan.tablo_getir(prosedurAdi);
             gridview.DataBind();
             gridview.HeaderRow.Style.Add("background-color", "#FFFFFF");
 
@@ -204,7 +253,7 @@ namespace Dershane
         {
             GridView gridview = new GridView();
             gridview.AllowPaging = false;
-            gridview.DataSource = baglan.tablo_getir(prosedurAdi); ;
+            gridview.DataSource = baglan.tablo_getir(prosedurAdi);
             gridview.DataBind();
             gridview.HeaderRow.Style.Add("background-color", "#FFFFFF");
 

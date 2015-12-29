@@ -102,6 +102,8 @@
                             </th>
                             <th>Sınıf Adı
                             </th>
+                            <th>Dersin Adı
+                            </th>
                             <th>Grup Adı
                             </th>
                             <th>Hangi Gün
@@ -121,6 +123,8 @@
                                     <td><%#Eval("#") %>
                                     </td>
                                     <td><%#Eval("sinifAdi") %>
+                                    </td>
+                                    <td><%#Eval("dersAdi") %>
                                     </td>
                                     <td><%#Eval("grupAdi") %>
                                     </td>

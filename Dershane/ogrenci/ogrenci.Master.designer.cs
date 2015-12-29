@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dershane.veli {
+namespace Dershane.ogrenci {
     
     
-    public partial class veli {
+    public partial class ogrenci {
         
         /// <summary>
         /// baslik control.
@@ -76,13 +76,31 @@ namespace Dershane.veli {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuYoklama;
         
         /// <summary>
-        /// menuSinavSonucu control.
+        /// menuDersProgrami control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuSinavSonucu;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuDersProgrami;
+        
+        /// <summary>
+        /// menuSinavSonuclari control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuSinavSonuclari;
+        
+        /// <summary>
+        /// menuDanismanaMesaj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuDanismanaMesaj;
         
         /// <summary>
         /// icerik control.

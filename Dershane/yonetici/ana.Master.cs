@@ -94,7 +94,7 @@ namespace Dershane
 
                     if (yetkiVarMi == "yok")
                     {
-                        Response.Redirect("~/giris.aspx?yetki=" + yetki, false);
+                        Response.Redirect("~/giris.aspx?yetki=" + yetkiVarMi, false);
                     }
                     else if (yetkiVarMi == "var")
                     {
@@ -106,7 +106,6 @@ namespace Dershane
                         }
                     }
                 }
-
             }
             else
             {

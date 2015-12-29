@@ -14,9 +14,18 @@
             <div class="caption">
                 <i class="icon-user-follow"></i>
                 Öğretmen Ekle
+
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <span class="btn default btn-file btn-sm yellow-saffron-stripe">
+                        <span class="fileinput-new">Excel Dosyası Seçin </span>
+                        <span class="fileinput-exists">Değiştir </span>
+                        <asp:FileUpload ID="fileExcel" runat="server" name="..." />
+                    </span>
+                    <span class="fileinput-filename"></span>
+                    &nbsp; <a href="javascript:;" class="close fileinput-exists" data-dismiss="fileinput"></a>
+                </div>
+                <asp:Button ID="btnExcelKaydet" CssClass="btn btn-sm yellow-saffron" OnClick="btnExcelKaydet_Click" Text="Kaydet" runat="server" />
             </div>
-            <asp:FileUpload ID="fileExcel" runat="server" />
-            <asp:Button ID="btnExcelKaydet" OnClick="btnExcelKaydet_Click" Text="Kaydet" runat="server" />
             <div class="tools">
                 <a href="javascript:;" class="collapse"></a>
                 <a href="#portlet-config" data-toggle="modal" class="config"></a>

@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="veli.master.cs" Inherits="Dershane.veli.veli" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ogretmen.master.cs" Inherits="Dershane.ogretmen.ogretmen" %>
 
 <!DOCTYPE html>
 <!-- 
@@ -140,7 +140,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
 
                         <li class="heading">
-                            <h3 class="uppercase">Veli</h3>
+                            <h3 class="uppercase">Öðretmen</h3>
                         </li>
                         <li runat="server" id="menuAnasayfa">
                             <a href="anasayfa.aspx">
@@ -148,16 +148,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <span class="title">Anasayfa</span>
                             </a>
                         </li>
-                        <li runat="server" id="menuYoklama">
-                            <a href="yavrumun_yoklamasi.aspx">
+                        <li runat="server" id="menuOgrencilerim">
+                            <a href="ogrencilerim.aspx">
                                 <i class="icon-graduation"></i>
-                                <span class="title">Yoklama</span>
-                            </a>
-                        </li>
-                        <li runat="server" id="menuSinavSonucu">
-                            <a href="yavrumun_sinav_sonucu.aspx">
-                                <i class="icon-moustache"></i>
-                                <span class="title">Sýnav Sonucu</span>
+                                <span class="title">Öðrencilerim</span>
                             </a>
                         </li>
                     </ul>

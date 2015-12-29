@@ -26,13 +26,15 @@ namespace Dershane.yonetici
         protected void btnExcelKaydet_Click(object sender, EventArgs e)
         {
             string zaman = DateTime.Now.GetDateTimeFormats('g')[2];
-            fonksiyon.excelOlarakKaydet("Öğretmenler - " + zaman, "spOgretmenleriGetirRapor");
+            string dosyaAdi = "Öğretmenler - " + zaman;
+            fonksiyon.excelOlarakKaydet(dosyaAdi, "spOgretmenleriGetirRapor");
         }
 
         protected void btnWordKaydet_Click(object sender, EventArgs e)
         {
             string zaman = DateTime.Now.GetDateTimeFormats('g')[2];
-            fonksiyon.wordOlarakKaydet("Öğretmenler - " + zaman, "spOgretmenleriGetirRapor");
+            string dosyaAdi = "Öğretmenler - " + zaman;
+            fonksiyon.wordOlarakKaydet(dosyaAdi, "spOgretmenleriGetirRapor");
         }
     }
 }

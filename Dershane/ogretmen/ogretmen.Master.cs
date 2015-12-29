@@ -6,26 +6,22 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Dershane.veli
+namespace Dershane.ogretmen
 {
-    public partial class veli : System.Web.UI.MasterPage
+    public partial class ogretmen : System.Web.UI.MasterPage
     {
         Fonksiyon fonksiyon = new Fonksiyon();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             string aktifSayfa = Page.AppRelativeVirtualPath.ToString();
-            if (aktifSayfa == "~/veli/anasayfa.aspx")
+            if (aktifSayfa == "~/ogretmen/anasayfa.aspx")
             {
                 menuAnasayfa.Attributes.Add("class", "active");
             }
-            else if (aktifSayfa == "~/veli/yavrumun_sinav_sonucu.aspx")
+            else if (aktifSayfa == "~/ogretmen/ogrencilerim.aspx")
             {
-                menuSinavSonucu.Attributes.Add("class", "active open");
-            }
-            else if (aktifSayfa == "~/veli/yavrumun_yoklamasi.aspx")
-            {
-                menuYoklama.Attributes.Add("class", "active open");
+                menuOgrencilerim.Attributes.Add("class", "active open");
             }
 
             if (IsPostBack)
@@ -39,7 +35,7 @@ namespace Dershane.veli
                 string sifre = Request.Cookies["giris"]["sifre"];
                 string yetki = Request.Cookies["giris"]["yetki"];
 
-                if (yetki != "veli")
+                if (yetki != "ogretmen")
                 {
                     fonksiyon.cerezSil();
                     Response.Redirect("~/giris.aspx?yetki=yok", false);
@@ -58,6 +54,7 @@ namespace Dershane.veli
                         while (dra.Read())
                         {
                             lblYetkiliAdi.Text = dra["ad"] + " " + dra["soyad"];
+                            imgYetkiliFoto.ImageUrl = "../resimler/ogretmen/" + dra["resim"];
                         }
                     }
                 }

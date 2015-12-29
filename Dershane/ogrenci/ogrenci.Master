@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="veli.master.cs" Inherits="Dershane.veli.veli" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ogrenci.master.cs" Inherits="Dershane.ogrenci.ogrenci" %>
 
 <!DOCTYPE html>
 <!-- 
@@ -140,7 +140,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
 
                         <li class="heading">
-                            <h3 class="uppercase">Veli</h3>
+                            <h3 class="uppercase">Öðrenci</h3>
                         </li>
                         <li runat="server" id="menuAnasayfa">
                             <a href="anasayfa.aspx">
@@ -149,15 +149,27 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                         </li>
                         <li runat="server" id="menuYoklama">
-                            <a href="yavrumun_yoklamasi.aspx">
+                            <a href="yoklama.aspx">
                                 <i class="icon-graduation"></i>
                                 <span class="title">Yoklama</span>
                             </a>
                         </li>
-                        <li runat="server" id="menuSinavSonucu">
-                            <a href="yavrumun_sinav_sonucu.aspx">
+                        <li runat="server" id="menuDersProgrami">
+                            <a href="ders_programi.aspx">
                                 <i class="icon-moustache"></i>
-                                <span class="title">Sýnav Sonucu</span>
+                                <span class="title">Ders Programý</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuSinavSonuclari">
+                            <a href="sinav_sonuclari.aspx">
+                                <i class="icon-chemistry"></i>
+                                <span class="title">Sýnav Sonuçlarý</span>
+                            </a>
+                        </li>
+                        <li runat="server" id="menuDanismanaMesaj">
+                            <a href="danismana_mesaj.aspx">
+                                <i class="icon-notebook"></i>
+                                <span class="title">Danýþmana Mesaj</span>
                             </a>
                         </li>
                     </ul>

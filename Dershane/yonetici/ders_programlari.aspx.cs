@@ -19,7 +19,7 @@ namespace Dershane.yonetici
             }
 
             ddlDers.DataSource = baglan.tablo_getir("spDersleriGetir");
-            ddlDers.DataTextField = "dersAdi";
+            ddlDers.DataTextField = "grupDers";
             ddlDers.DataValueField = "dersID";
             ddlDers.DataBind();
 
